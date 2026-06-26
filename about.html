@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About RecordLog</title>
+  <style>
+    :root { --bg:#F7F2EA; --card:#FFFFFF; --accent:#F5821F; --text:#2B2520; --muted:#6F6258; --border:#E7DDD2; --soft:#FFF7EF; --softBorder:#F3D7BE; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+    header,main,footer { max-width:820px; margin:0 auto; padding-left:24px; padding-right:24px; }
+    header { padding-top:28px; padding-bottom:28px; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-size:22px; font-weight:700; color:var(--text); text-decoration:none; }
+    nav a { margin-left:20px; color:var(--text); text-decoration:none; font-size:15px; }
+    main { padding-top:8px; padding-bottom:80px; }
+    .page { background:var(--card); border:1px solid var(--border); border-radius:24px; padding:42px 36px; margin-bottom:28px; }
+    h1 { margin-top:0; font-size:38px; line-height:1.15; }
+    h2 { margin-top:32px; font-size:22px; }
+    h3 { margin-top:24px; margin-bottom:8px; font-size:18px; line-height:1.35; }
+    p,li { color:var(--muted); font-size:16px; text-align:justify; text-justify:inter-word; }
+    p { margin:0 0 18px; }
+    ul { margin-top:0; margin-bottom:22px; padding-left:22px; }
+    h1,h2,h3,header,nav,footer { text-align:left; }
+    strong { color:var(--text); }
+    .feature-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:18px; }
+    .feature-card { background:var(--soft); border:1px solid var(--softBorder); border-radius:16px; padding:20px; }
+    .feature-card .icon { font-size:22px; margin-bottom:8px; }
+    .feature-card h3 { margin:0 0 6px; font-size:16px; }
+    .feature-card p { margin:0; font-size:15px; text-align:left; }
+    .step { display:flex; gap:16px; padding:18px 0; border-bottom:1px solid var(--border); }
+    .step:last-child { border-bottom:none; }
+    .step-num { min-width:32px; height:32px; background:var(--accent); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:14px; font-weight:700; }
+    .step-body h3 { margin:0 0 4px; font-size:16px; }
+    .step-body p { margin:0; font-size:15px; text-align:left; }
+    .cta { background:var(--accent); border-radius:20px; padding:36px; text-align:center; margin-top:28px; }
+    .cta h2 { margin-top:0; color:#fff; text-align:center; }
+    .cta p { color:rgba(255,255,255,0.85); text-align:center; margin:0; }
+    .page-end { margin-top:28px; margin-bottom:0; font-size:14px; text-align:left; }
+    footer { padding-bottom:48px; color:var(--muted); font-size:14px; }
+    footer a { color:var(--muted); text-decoration:none; margin-left:14px; }
+    @media(max-width:760px) {
+      header { display:block; }
+      nav { margin-top:14px; }
+      nav a { margin-left:0; margin-right:16px; }
+      .page { padding:32px 24px; }
+      h1 { font-size:32px; }
+      .feature-grid { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html">RecordLog</a>
+    <nav>
+      <a href="about.html">About RecordLog</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="support.html">Help & Support</a>
+    </nav>
+  </header>
+  <main>
+    <section class="page">
+      <h1>About RecordLog</h1>
+      <p>Document anything. Keep a clear record.</p>
+
+      <h2>What RecordLog is for</h2>
+      <p>RecordLog is a camera app with GPS tagging, server timestamps, SHA-256 photo hashing, and PDF export. Use it to document any asset — property, vehicle, equipment, or site condition. Open the app, start a project, take your photos, and generate a clean PDF ready to save or share. No technical knowledge needed.</p>
+
+      <h2>What's included</h2>
+      <div class="feature-grid">
+        <div class="feature-card"><div class="icon">📄</div><h3>Clean PDF Export</h3><p>Generate a structured, organised PDF with all your photos, labels, and notes — ready to save or share instantly.</p></div>
+        <div class="feature-card"><div class="icon">📂</div><h3>Organised by Area</h3><p>Group photos by room, area, or section. Drag to reorder. Every project stays neat and easy to read.</p></div>
+        <div class="feature-card"><div class="icon">📍</div><h3>GPS Tagging</h3><p>Optional. Records your live device coordinates per photo, anchored to the project address.</p></div>
+        <div class="feature-card"><div class="icon">🕐</div><h3>Server Timestamps</h3><p>Optional. Time recorded server-side via Firebase, not your device clock, for a consistent metadata record.</p></div>
+        <div class="feature-card"><div class="icon">🔒</div><h3>Locked Records</h3><p>Once generated, your inspection is locked and stored in Firebase. The record stays intact as created.</p></div>
+        <div class="feature-card"><div class="icon">🔐</div><h3>SHA-256 Hashing</h3><p>Each photo is fingerprinted with a unique hash so the integrity of the file can be confirmed.</p></div>
+      </div>
+
+      <h2>Who uses RecordLog</h2>
+      <p>Anyone who needs a clear, dated photo record with notes — properties, vehicles, equipment, medical screens, site conditions, and more.</p>
+
+      <h2>How it works</h2>
+      <div style="margin-top:18px;">
+        <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Create a project</h3><p>Enter the address of the property or asset. Give the project a name, or let RecordLog generate one automatically.</p></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Take photos in-app</h3><p>Use the RecordLog camera. Every photo is captured with metadata recorded at that exact moment — GPS and timestamp where available.</p></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Add notes and labels</h3><p>Title each photo, assign it to an area or room, and add optional notes up to 300 characters.</p></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-body"><h3>Review and reorder</h3><p>Review all photos grouped by area before generating your report. Drag to reorder. Edit any detail.</p></div></div>
+        <div class="step"><div class="step-num">5</div><div class="step-body"><h3>Generate and export</h3><p>Tap Generate PDF. RecordLog compiles your photos into a clean, organised PDF — locked, watermarked, and ready to download or share.</p></div></div>
+      </div>
+
+      <div class="cta">
+        <h2>Start documenting today</h2>
+        <p>Free to use. No technical knowledge required. Your first inspection takes less than five minutes.</p>
+      </div>
+
+      <p class="page-end">© 2026 RecordLog · Melbourne, Australia</p>
+    </section>
+  </main>
+  <footer>
+    © 2026 RecordLog · Melbourne, Australia
+    <a href="about.html">About RecordLog</a>
+    <a href="terms.html">Terms & Conditions</a>
+    <a href="support.html">Help & Support</a>
+  </footer>
+</body>
+</html>
