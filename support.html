@@ -1,12 +1,12 @@
-Paste this whole code into `support.html`.
-
-```html id="websupport"
+```html id="recordlog-support-fixed"
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Help & Support | RecordLog</title>
+
   <style>
     :root {
       --bg: #F7F2EA;
@@ -15,6 +15,8 @@ Paste this whole code into `support.html`.
       --text: #2B2520;
       --muted: #6F6258;
       --border: #E7DDD2;
+      --softAccent: #FFF7EF;
+      --softAccentBorder: #F3D7BE;
     }
 
     * {
@@ -34,6 +36,332 @@ Paste this whole code into `support.html`.
       margin: 0 auto;
       padding: 28px 24px;
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px 40px;
+    }
+
+    footer {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px 48px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .page {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 42px 42px;
+      margin: 0 auto 32px;
+    }
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 38px;
+      line-height: 1.15;
+    }
+
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 18px;
+      font-size: 23px;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin-top: 28px;
+      margin-bottom: 8px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    strong {
+      color: var(--text);
+    }
+
+    .intro {
+      font-size: 17px;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+
+    .tip {
+      background: var(--softAccent);
+      border: 1px solid var(--softAccentBorder);
+      border-radius: 16px;
+      padding: 14px 16px;
+      margin: 12px 0 22px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .support-card {
+      background: var(--softAccent);
+      border: 1px solid var(--softAccentBorder);
+      border-left: 5px solid var(--accent);
+      border-radius: 18px;
+      padding: 24px;
+      margin-top: 40px;
+    }
+
+    .support-card h2 {
+      margin-top: 0;
+    }
+
+    .email {
+      font-weight: 700;
+      color: var(--text);
+      font-size: 17px;
+      margin-bottom: 0;
+    }
+
+    .page-end {
+      margin-top: 26px;
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 14px;
+    }
+
+    @media (max-width: 760px) {
+      header {
+        display: block;
+      }
+
+      nav {
+        margin-top: 14px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 16px;
+      }
+
+      main {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      footer {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .page {
+        padding: 32px 24px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a class="logo" href="index.html">RecordLog</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page">
+      <h1>Help & Support</h1>
+      <p class="intro">
+        Everything you need to get started and get the most out of RecordLog.
+      </p>
+
+      <h2>How to use RecordLog</h2>
+
+      <h3>1 — Create an account</h3>
+      <p>
+        Download RecordLog and tap Get Started on the Welcome screen. Enter your name, email address, and a password.
+        You will receive a verification email — tap the link inside to activate your account, then sign in.
+      </p>
+
+      <h3>2 — Start a new project</h3>
+      <p>
+        From the Dashboard, tap the + button. Enter a name for your project and an optional location. RecordLog works
+        for any asset — property, vehicle, equipment, medical, or anything worth documenting.
+      </p>
+      <div class="tip">
+        A clear project name helps you find it later — e.g. MainSt-April2026
+      </div>
+
+      <h3>3 — Take photos using the in-app camera</h3>
+      <p>
+        Tap Start Shooting to open the camera. RecordLog uses its own camera to ensure each photo is captured with
+        consistent metadata at the moment of the shutter tap. Your phone gallery is intentionally not supported.
+      </p>
+      <div class="tip">
+        Allow location and camera permissions when prompted for best results.
+      </div>
+
+      <h3>4 — Review and label each photo</h3>
+      <p>
+        After every shutter tap, the Photo Review screen appears. Add an optional title, area label, and notes up to
+        300 characters. Tap Save & Next to continue shooting, or Save & Review All when you are done.
+      </p>
+
+      <h3>5 — Organise in the gallery</h3>
+      <p>
+        The Photo Gallery groups your photos by area. Drag to reorder within each group. Tap Edit on any photo to
+        update its title, area label, or notes. Tap Add More Photos to return to the camera at any point.
+      </p>
+
+      <h3>6 — Generate and export your PDF</h3>
+      <p>
+        Tap Generate PDF. RecordLog compiles all photos into a clean, organised PDF and locks the record. Tap Download
+        PDF to save to your device, or Share PDF to send it directly to someone.
+      </p>
+      <div class="tip">
+        The Firebase cloud record is the stored version — the PDF is your shareable copy.
+      </div>
+
+      <h2>Tips for a better record</h2>
+
+      <h3>Label clearly</h3>
+      <p>
+        Use titles like "Kitchen-tap" or "Rear-bumper" instead of "Photo 1". Clear labels make your PDF far easier
+        to read and navigate later.
+      </p>
+
+      <h3>Add a short note</h3>
+      <p>
+        Even one sentence adds useful context. "Small scuff near skirting board" is far more helpful to a reader than
+        no note at all.
+      </p>
+
+      <h3>Stay on location</h3>
+      <p>
+        Take all photos while physically present at the asset. This keeps your GPS coordinates accurate and consistent
+        across the whole project.
+      </p>
+
+      <h3>Keep data on</h3>
+      <p>
+        Mobile data or Wi-Fi enables server timestamps and cloud sync. Offline use is supported, but the server-side
+        timestamp cannot be confirmed without an active connection.
+      </p>
+
+      <h3>Use good lighting</h3>
+      <p>
+        Well-lit photos show detail clearly in the exported PDF. Natural light works best for close-up shots and
+        detailed damage records.
+      </p>
+
+      <h3>Be consistent</h3>
+      <p>
+        Use the same area labels throughout — "Kitchen", "Bedroom 1", "Front exterior". This groups your photos
+        neatly and keeps the PDF easy to follow.
+      </p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Why can't I upload photos from my phone gallery?</h3>
+      <p>
+        RecordLog uses its own camera to ensure every photo is captured with consistent metadata at the moment of the
+        shutter tap. Gallery photos don't carry this information reliably, so they are intentionally not supported.
+      </p>
+
+      <h3>What is the difference between the PDF and the Firebase record?</h3>
+      <p>
+        The PDF is a shareable convenience copy. The stored record is in Firebase, hosted in Melbourne. Every exported
+        PDF includes a watermark on every page noting this.
+      </p>
+
+      <h3>Can I edit a photo or inspection after it has been locked?</h3>
+      <p>
+        Once locked, an inspection cannot be edited on the free tier without a one-time Edit After Lock unlock ($2.99).
+        It is generally better to start a new project for an updated session.
+      </p>
+
+      <h3>How many photos can I take per project?</h3>
+      <p>
+        The free tier allows 1 active project with up to 10 photos. The paid plan ($7.99/month) gives you up to 25
+        projects with 30 photos each. A single PDF export is available for $1.99.
+      </p>
+
+      <h3>Where is my data stored and how long is it kept?</h3>
+      <p>
+        All data is stored in Google Firebase, hosted in Melbourne, Australia (australia-southeast2), in accordance
+        with the Australian Privacy Act 1988. Data is retained for 30 days after account deletion.
+      </p>
+
+      <h3>What happens if I take photos without an internet connection?</h3>
+      <p>
+        The server-side timestamp cannot be confirmed in real time without an active connection. For the most reliable
+        records, keep mobile data or Wi-Fi active during your session.
+      </p>
+
+      <h3>Can I use RecordLog for any type of inspection?</h3>
+      <p>
+        Yes. RecordLog is a camera app with SHA-256 hashing, GPS tagging, and PDF export. Use it to document anything —
+        properties, vehicles, equipment, medical screens, site conditions, or any asset. RecordLog does not certify or
+        validate anything you photograph. It is a documentation tool only.
+      </p>
+
+      <div class="support-card">
+        <h2>Still need help?</h2>
+        <p>
+          Send us an email with a brief description of what you are seeing and which device you are using. We will get
+          back to you as soon as we can.
+        </p>
+        <p class="email">recordlogapp@gmail.com</p>
+      </div>
+
+      <p class="page-end">
+        © 2026 RecordLog · Help & Support · Melbourne, Australia
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 RecordLog · Melbourne, Australia
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms & Conditions</a>
+  </footer>
+</body>
+</html>
+```
       justify-content: space-between;
       align-items: center;
     }
