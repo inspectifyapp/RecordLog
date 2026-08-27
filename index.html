@@ -1,86 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-AU">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RecordLog — Documentation made simple</title>
-  <style>
-    :root { --bg:#F7F2EA; --card:#FFFFFF; --accent:#F5821F; --text:#2B2520; --muted:#6F6258; --border:#E7DDD2; --soft:#FFF7EF; --softBorder:#F3D7BE; }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
-    header,main,footer { max-width:820px; margin:0 auto; padding-left:24px; padding-right:24px; }
-    header { padding-top:28px; padding-bottom:28px; display:flex; justify-content:space-between; align-items:center; }
-    .logo { font-size:22px; font-weight:700; color:var(--text); text-decoration:none; }
-    nav a { margin-left:20px; color:var(--text); text-decoration:none; font-size:15px; }
-    main { padding-top:8px; padding-bottom:80px; }
-    .page { background:var(--card); border:1px solid var(--border); border-radius:24px; padding:42px 36px; margin-bottom:28px; }
-    h1 { margin-top:0; font-size:38px; line-height:1.15; }
-    h2 { margin-top:32px; font-size:22px; }
-    h3 { margin-top:24px; margin-bottom:8px; font-size:18px; }
-    p,li { color:var(--muted); font-size:16px; text-align:justify; text-justify:inter-word; }
-    p { margin:0 0 18px; }
-    h1,h2,h3,header,nav,footer { text-align:left; }
-    strong { color:var(--text); }
-    .tagline { font-size:20px; font-weight:700; color:var(--accent); margin:10px 0 6px; }
-    .anchor { font-size:17px; font-weight:600; color:var(--text); margin-bottom:20px; }
-    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:28px; }
-    .card { background:var(--card); border:1px solid var(--border); border-radius:20px; padding:24px; }
-    .card h3 { margin-top:0; font-size:17px; }
-    .card p { margin:0; font-size:15px; }
-    .notice { background:var(--soft); border:1px solid var(--softBorder); border-radius:18px; padding:24px 28px; }
-    .notice p { margin:0; text-align:left; }
-    footer { padding-bottom:48px; color:var(--muted); font-size:14px; }
-    footer a { color:var(--muted); text-decoration:none; margin-left:14px; }
-    @media(max-width:760px) {
-      header { display:block; }
-      nav { margin-top:14px; }
-      nav a { margin-left:0; margin-right:16px; }
-      .page { padding:32px 24px; }
-      h1 { font-size:32px; }
-      .cards { grid-template-columns:1fr; }
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RecordLog — Document anything, keep a clear record</title>
+  <meta name="description" content="RecordLog is a photo documentation app for organised details and structured PDF records, coming soon to the App Store.">
+  <link rel="canonical" href="https://recordlog.com.au/">
+  <meta property="og:title" content="RecordLog — Document anything, keep a clear record">
+  <meta property="og:description" content="Capture photos, add organised details, and export a structured PDF record. Coming soon to the App Store.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://recordlog.com.au/">
+  <meta name="theme-color" content="#F7F2EA">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <a class="logo" href="index.html">RecordLog</a>
-    <nav>
-      <a href="about.html">About RecordLog</a>
-      <a href="terms.html">Terms & Conditions</a>
-      <a href="support.html">Help & Support</a>
-    </nav>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="RecordLog home">RecordLog</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="support.html">Help &amp; Support</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main>
-    <section class="page">
-      <h1>RecordLog</h1>
-      <div class="tagline">Documentation made simple.</div>
-      <div class="anchor">You inspect. RecordLog documents.</div>
-      <p>RecordLog helps you create clear, structured photo records and export clean PDF reports — for any asset, any situation.</p>
+  <main id="main-content" tabindex="-1">
+    <section class="hero">
+      <div class="container"><div class="hero-card">
+        <p class="status">Coming soon to the App Store</p>
+        <h1>RecordLog</h1>
+        <p class="tagline">Document anything, keep a clear record.</p>
+        <p class="hero-copy">RecordLog helps you capture clear photo records, add organised details, and export a structured PDF copy for straightforward personal or business documentation.</p>
+        <div class="hero-actions"><a class="button" href="about.html">See how it works</a><a class="button button-secondary" href="support.html">Help &amp; Support</a></div>
+      </div></div>
     </section>
-    <section class="cards">
-      <div class="card">
-        <h3>📷 Capture photos</h3>
-        <p>Record visual observations clearly and consistently using the in-app camera.</p>
-      </div>
-      <div class="card">
-        <h3>📝 Add notes</h3>
-        <p>Add titles, area labels, and notes to each photo for a complete, readable record.</p>
-      </div>
-      <div class="card">
-        <h3>📄 Export PDF reports</h3>
-        <p>Generate a structured PDF with all your photos and notes, ready to save or share.</p>
+    <section class="section" aria-labelledby="workflow-heading">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">How it works</p><h2 id="workflow-heading">From photos to an organised record.</h2></div>
+        <div class="workflow-grid">
+          <article class="info-card"><span class="step-number" aria-hidden="true">1</span><h3>Capture photos</h3><p>Use the RecordLog camera to capture the visual details you want to document.</p></article>
+          <article class="info-card"><span class="step-number" aria-hidden="true">2</span><h3>Add organised details</h3><p>Add titles, area labels, and notes so each photo has clear context.</p></article>
+          <article class="info-card"><span class="step-number" aria-hidden="true">3</span><h3>Export a structured PDF record</h3><p>Generate a clear, shareable PDF copy containing your photos and details.</p></article>
+        </div>
       </div>
     </section>
-    <section class="notice">
-      <p><strong>Documentation-first.</strong> RecordLog does not inspect, certify, or verify. You perform the inspection. RecordLog helps document what was observed.</p>
+    <section class="section" aria-labelledby="audience-heading">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">Who it’s for</p><h2 id="audience-heading">Everyday documentation, kept clear.</h2><p>RecordLog is designed for ordinary personal and business records across a wide range of assets and situations.</p></div>
+        <div class="audience-grid" role="list"><div class="audience-item" role="listitem">Property</div><div class="audience-item" role="listitem">Vehicles</div><div class="audience-item" role="listitem">Equipment</div><div class="audience-item" role="listitem">Belongings</div><div class="audience-item" role="listitem">General records</div></div>
+      </div>
+    </section>
+    <section class="section" aria-labelledby="boundary-heading">
+      <div class="container"><div class="notice"><h2 id="boundary-heading">Documentation tool only</h2><p>RecordLog does not inspect, assess, certify, verify, or formally validate a condition. You perform the documentation; RecordLog helps organise what was captured. It is not legal, medical, financial, tax, or professional advice.</p></div></div>
     </section>
   </main>
-  <footer>
-    © 2026 RecordLog · Melbourne, Australia
-    <a href="about.html">About RecordLog</a>
-    <a href="terms.html">Terms & Conditions</a>
-    <a href="support.html">Help & Support</a>
-    <a href="privacy.html">Privacy Policy</a>
-  </footer>
+  <footer class="site-footer"><div class="container footer-inner"><div class="footer-meta"><strong>DATALOG PTY LTD</strong><br>Publisher and operator of RecordLog<br>Melbourne, Australia</div><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="support.html">Help &amp; Support</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div></footer>
 </body>
 </html>
