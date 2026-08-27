@@ -51,6 +51,7 @@ main { min-height: 62vh; }
 .section { padding: clamp(3rem, 7vw, 5rem) 0; }
 .section + .section { padding-top: 0; }
 .section-heading { max-width: 680px; margin-bottom: 1.75rem; }
+.hero-card > .hero-copy, .section[aria-labelledby="audience-heading"] .section-heading { max-width: none; }
 .workflow-grid, .audience-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
 .audience-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 .info-card { border: 1px solid var(--border); border-radius: 1.1rem; padding: 1.35rem; background: var(--surface); }
@@ -113,7 +114,7 @@ main { min-height: 62vh; }
   .footer-links { display: grid; grid-template-columns: 1fr; }
 }
 @media (min-width: 700px) {
-  .hero-copy, .prose p, .accordion-content p {
+  .hero-card > .hero-copy, .workflow-grid .info-card p, .prose p, .accordion-content p, .section[aria-labelledby="boundary-heading"] .notice p {
     text-align: justify;
     text-justify: inter-word;
   }
