@@ -52,14 +52,15 @@ main { min-height: 62vh; }
 .section + .section { padding-top: 0; }
 .section-heading { max-width: 680px; margin-bottom: 1.75rem; }
 .hero-card > .hero-copy, .section[aria-labelledby="audience-heading"] .section-heading { max-width: none; }
-.workflow-grid, .audience-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-.audience-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.workflow-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.audience-grid { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 0.65rem; }
 .info-card { border: 1px solid var(--border); border-radius: 1.1rem; padding: 1.35rem; background: var(--surface); }
 .step-number { display: grid; width: 2rem; height: 2rem; margin-bottom: 1rem; place-items: center; border-radius: 50%; background: var(--accent); color: var(--text); font-size: 0.85rem; font-weight: 850; }
-.audience-item { display: grid; min-height: 86px; place-items: center; border: 1px solid var(--border); border-radius: 1rem; padding: 1rem 0.7rem; background: var(--surface-soft); color: var(--text); font-weight: 750; text-align: center; }
+.audience-item { display: inline-flex; align-items: center; border: 1px solid var(--border); border-radius: 999px; padding: 0.55rem 0.9rem; background: var(--surface); color: var(--text); font-size: 0.95rem; font-weight: 700; text-align: center; }
 .notice { border: 1px solid var(--accent-soft); border-radius: 1.1rem; padding: 1.35rem 1.5rem; background: var(--surface-soft); }
 .notice h2, .notice h3 { font-size: 1.05rem; }
 .notice-spaced { margin-top: 1.5rem; }
+.privacy-intro-notice { margin-bottom: 1.5rem; }
 .page-hero { padding: clamp(3rem, 7vw, 5rem) 0 1.5rem; }
 .page-hero-panel { border-radius: 1.4rem; padding: clamp(1.7rem, 5vw, 2.5rem); background: linear-gradient(135deg, var(--accent), #fa9a45); color: var(--text); }
 .page-hero-panel h1, .page-hero-panel p { color: var(--text); }
@@ -101,8 +102,7 @@ main { min-height: 62vh; }
   .header-inner, .footer-inner { flex-direction: column; }
   .header-inner { padding: 1rem 0; align-items: flex-start; gap: 0.65rem; }
   .site-nav, .site-nav ul { width: 100%; }
-  .workflow-grid, .audience-grid { grid-template-columns: 1fr; }
-  .audience-item { min-height: 0; place-items: start; text-align: left; }
+  .workflow-grid { grid-template-columns: 1fr; }
   .footer-links { justify-content: flex-start; }
 }
 @media (max-width: 480px) {
