@@ -49,6 +49,8 @@ main { min-height: 62vh; }
 .hero-actions { display: flex; margin-top: 1.75rem; flex-wrap: wrap; gap: 0.75rem; }
 .button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; border: 1px solid var(--accent-strong); border-radius: 0.75rem; padding: 0.7rem 1rem; background: var(--accent-strong); color: var(--text); font-weight: 750; text-decoration: none; }
 .button-secondary { border-color: var(--border); background: var(--surface); color: var(--text); }
+.app-store-badge { display: inline-flex; min-height: 40px; align-items: center; border-radius: 0.2rem; line-height: 0; }
+.app-store-badge img { display: block; width: auto; height: 40px; }
 .section { padding: clamp(3rem, 7vw, 5rem) 0; }
 .section + .section { padding-top: 0; }
 .section-heading { max-width: 680px; margin-bottom: 1.75rem; }
@@ -80,6 +82,14 @@ main { min-height: 62vh; }
 .section-number { color: var(--accent-deep); font-size: 0.72rem; font-weight: 850; letter-spacing: 0.08em; }
 .accordion-content { border-top: 1px solid var(--border); padding: 1rem; }
 .accordion-content > :last-child { margin-bottom: 0; }
+.accordion-content h3 { position: relative; margin: 1.3rem 0 0.45rem; padding-left: 1.05rem; color: var(--text); font-size: 0.98rem; font-weight: 800; }
+.accordion-content h3:first-child { margin-top: 0; }
+.accordion-content h3::before { content: "–"; position: absolute; left: 0; color: var(--accent-deep); }
+.accordion-content h3 + p { margin-left: 1.05rem; }
+.document-accordion { margin-top: 1.5rem; }
+.canonical-footer { margin-top: 1.5rem; color: var(--muted); font-size: 0.9rem; text-align: left; }
+.contact-details { text-align: left !important; }
+code { border-radius: 0.25rem; padding: 0.08rem 0.25rem; background: var(--surface-soft); color: var(--text); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.9em; }
 .feature-list, .step-list { display: grid; margin: 0; padding: 0; gap: 0; list-style: none; }
 .feature-list li, .step-row, .support-item { border-bottom: 1px solid var(--border); padding: 0.9rem 0; }
 .feature-list li:first-child, .step-row:first-child, .support-item:first-child { padding-top: 0; }
@@ -90,13 +100,25 @@ main { min-height: 62vh; }
 .prose h2 { margin-top: 2.25rem; font-size: 1.45rem; }
 .prose h2:first-child { margin-top: 0; }
 .prose ul { padding-left: 1.25rem; }
-.hero-copy, .prose p, .accordion-content p { text-align: left; }
+.hero-copy,
+.section-heading > p:not(.eyebrow),
+.workflow-grid .info-card p,
+.notice p,
+.accordion-content p,
+.accordion-content li {
+  text-align: justify;
+  text-align-last: auto;
+  text-justify: inter-word;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
 .contact-card { margin-top: 1.5rem; border-radius: 1.1rem; padding: 1.5rem; background: linear-gradient(135deg, var(--accent), #fa9a45); color: var(--text); text-align: center; }
 .contact-card h2, .contact-card p { color: var(--text); }
 .contact-card a { color: var(--text); font-weight: 800; }
 .site-footer { margin-top: clamp(2.5rem, 6vw, 4.5rem); border-top: 1px solid var(--border); }
 .footer-inner { display: flex; padding: 2rem 0 2.75rem; align-items: flex-start; justify-content: space-between; gap: 1.5rem; }
 .footer-meta { color: var(--muted); font-size: 0.9rem; }
+.apple-trademark-credit { display: inline-block; max-width: 32rem; margin-top: 0.55rem; color: var(--muted); font-size: 0.72rem; line-height: 1.4; }
 .footer-links { display: flex; margin: 0; padding: 0; flex-wrap: wrap; justify-content: flex-end; gap: 0.5rem 1rem; list-style: none; }
 .footer-links a { display: inline-flex; min-height: 44px; align-items: center; color: var(--muted); }
 .not-found { display: grid; min-height: 60vh; padding: 3rem 0; place-items: center; text-align: center; }
@@ -116,16 +138,14 @@ main { min-height: 62vh; }
   .page-hero-panel { border-radius: 1.1rem; }
   .footer-links { display: grid; grid-template-columns: 1fr; }
 }
-@media (min-width: 700px) {
-  .hero-card > .hero-copy, .workflow-grid .info-card p, .prose p, .accordion-content p, .section[aria-labelledby="boundary-heading"] .notice p {
-    text-align: justify;
-    text-justify: inter-word;
-  }
-}
 @media (min-width: 900px) {
   .home-documentation-notice { display: flex; align-items: center; gap: 0.5rem; padding: 1rem 0.5rem; }
   .home-documentation-notice h2 { margin-bottom: 0; flex: 0 0 auto; font-size: 1rem; white-space: nowrap; }
   .home-documentation-notice p { margin-bottom: 0; }
+}
+@media (min-width: 700px) {
+  .accordion-content .orphan-controlled { text-wrap: balance; }
+  .accordion-content .orphan-controlled .keep-together { white-space: nowrap; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
