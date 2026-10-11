@@ -84,8 +84,11 @@ main { min-height: 62vh; }
 .accordion-content > :last-child { margin-bottom: 0; }
 .accordion-content h3 { position: relative; margin: 1.3rem 0 0.45rem; padding-left: 1.05rem; color: var(--text); font-size: 0.98rem; font-weight: 800; }
 .accordion-content h3:first-child { margin-top: 0; }
-.accordion-content h3::before { content: "–"; position: absolute; left: 0; color: var(--accent-deep); }
+.accordion-content h3::before { content: "–"; position: absolute; top: -0.08rem; left: 0; color: var(--accent-deep); font-size: 1.125rem; font-weight: 700; line-height: 1; }
 .accordion-content h3 + p { margin-left: 1.05rem; }
+.accordion-content .dash-list { margin: 0; padding: 0; list-style: none; }
+.accordion-content .dash-list li { position: relative; padding-left: 1.5rem; }
+.accordion-content .dash-list li::before { content: "–"; position: absolute; top: -0.12rem; left: 0; color: var(--accent-deep); font-size: 1.125rem; font-weight: 700; }
 .document-accordion { margin-top: 1.5rem; }
 .canonical-footer { margin-top: 1.5rem; color: var(--muted); font-size: 0.9rem; text-align: left; }
 .contact-details { text-align: left !important; }
